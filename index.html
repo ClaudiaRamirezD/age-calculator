@@ -3,8 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <meta>
-
+  <meta name="description" content="A responsive Age Calculator, built using HTML, CSS, and JavaScript. Perfect for improving frontend development skills.">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
   <title>Frontend Mentor | Age calculator app</title>
@@ -39,20 +38,19 @@
         </div>
       </section>
 
-      <section class="divider">
+      <section class="divider" aria-labelledby="calculation-button">
+        <h2 class="sr-only" id="calculation-button">Calculate age</h2>
         <button class="calculate-button" aria-label="Calculate age">
           <svg class="my-icon" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="4"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
         </button>
       </section>
 
-      <section class="result" aria-live="polite">
+      <section class="result" aria-live="polite" aria-labelledby="result">
+        <h2 class="sr-only" id="result">You have lived:</h2>
         <p><span class="years">--</span> years</p>
         <p><span class="months">--</span> months</p>
         <p><span class="days">--</span> days</p>
       </section>
-
-
-
   </main>
   <footer>
     <div class="attribution">
