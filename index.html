@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Age calculator app</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1 class="sr-only">Age calculator app</h1>
+
+      <section class="date-input" aria-labelledby="birthday-label">
+        <h2 id="birthday-label" class="sr-only">Enter your date of birth to calculate your age</h2>
+        <span id="date-format-info" class="sr-only">Enter the date in day, month, and year format</span>
+
+        <div class="day-section bd-input">
+          <label for="day">day</label>
+          <input type="number" id="day" name="day" aria-describedby="day-info" min="1" max="31" placeholder="DD">
+          <span id="day-info" class="sr-only">Enter a day between 1 and 31</span>
+          <span class="error hidden">This field is required</span>
+        </div>
+        <div class="month-section bd-input">
+          <label for="month">month</label>
+          <input type="number" id="month" name="month" aria-describedby="month-info" min="1" max="12" placeholder="MM">
+          <span id="month-info" class="sr-only">Enter a month between 1 and 12</span>
+          <span class="error hidden">This field is required</span>
+        </div>
+        <div class="year-section bd-input">
+          <label for="year">year</label>
+          <input type="number" id="year" name="year" aria-describedby="year-info" min="1900" max="2024" placeholder="YYYY">
+          <span id="year-info" class="sr-only">Enter a year between 1900 and 2024</span>
+          <span class="error hidden">This field is required</span>
+        </div>
+      </section>
+
+      <section class="divider">
+        <button class="calculate-button" aria-label="Calculate age">
+          <svg class="my-icon" xmlns="http://www.w3.org/2000/svg" width="46" height="44" viewBox="0 0 46 44"><g fill="none" stroke="#FFF" stroke-width="4"><path d="M1 22.019C8.333 21.686 23 25.616 23 44M23 44V0M45 22.019C37.667 21.686 23 25.616 23 44"/></g></svg>
+        </button>
+      </section>
+
+      <section class="result" aria-live="polite">
+        <p><span class="years">--</span> years</p>
+        <p><span class="months">--</span> months</p>
+        <p><span class="days">--</span> days</p>
+      </section>
+
+
+
+  </main>
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Claudia DOm</a>.
+    </div>
+  </footer>
+  <script src="main.js"></script>
+  
+</body>
+</html>

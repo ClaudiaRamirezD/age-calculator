@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Kumbh+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --ff: "Poppins", sans-serif;
+    --fnormal: normal;
+    --fitalic: italic;
+    --fw-light: 400;
+    --fw-regular: 700;
+    --fw-bold: 800;
+    --fs-inputs: 2rem;
+
+    --clrs-acc-purple: hsl(259, 100%, 65%);
+    --clrs-acc-light-red: hsl(0, 100%, 67%);
+
+    --clr-ntrl-white: hsl(0, 0%, 100%);
+    --clr-ntrl-off-white: hsl(0, 0%, 94%);
+    --clr-ntrl-light-gray: hsl(0, 0%, 86%);
+    --clr-ntrl-smokey-grey: hsl(0, 1%, 44%);
+    --clr-ntrl-off-black: hsl(0, 0%, 8%);
+}
+
+body{
+    background-color: var(--clr-ntrl-off-white);
+    font-family: var(--ff);
+    font-weight: var(--fw-bold);
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: var(--clr-ntrl-white);
+    width: 95%;
+    padding: 2.9rem 1rem;
+    border-radius: 15px 15px 100px 15px;
+}
+
+label {
+    text-transform: uppercase;
+    font-size: clamp(0.7rem, 0.5239rem + 0.7512vw, 1.2rem);
+    color: var(--clr-ntrl-smokey-grey);
+    font-weight: var(--fw-regular);
+    letter-spacing: .1rem;
+}
+
+.date-input {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: .7rem;
+}
+
+
+.date-input input {
+    width: 95%; /* Ensures input fields take up full width of their respective columns */
+    padding: .7rem;
+    margin-top: .5rem;
+    border: 1.5px solid var(--clr-ntrl-light-gray);
+    border-radius: 7px;
+    font-size: clamp(1.2rem, 0.9183rem + 1.2019vw, 2rem);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+}
+
+/* Remove the border from input field */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:hover {
+    border: 1px solid var(--clrs-acc-purple);
+}
+
+input:focus{
+    border: 1px solid var(--clrs-acc-purple);
+    outline: 1px solid var(--clrs-acc-purple);
+
+}
+
+input::placeholder{
+    color: var(--clr-ntrl-light-gray);
+}
+
+.error{
+    color: var(--clrs-acc-light-red);
+    font-style: var(--fitalic);
+    font-size: .5rem;
+    font-weight: var(--fnormal);
+}
+
+.hidden{
+    display: none;
+}
+
+.divider {
+    margin-block: 3.5rem;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    border-top: 1.5px solid var(--clr-ntrl-light-gray);
+}
+
+.calculate-button {
+    background: none;
+    border: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+svg{
+    background-color: var(--clrs-acc-purple);
+    border-radius: 50%;
+    padding: 1.2rem;
+    width: 64px;
+    height: auto;
+    cursor: pointer;
+}
+
+svg:hover {
+    background-color: var(--clr-ntrl-off-black);
+}
+
+.my-icon path {
+    stroke: var(--clr-ntrl-light-gray);
+}
+
+.result{
+    font-size: 3.4rem;
+    font-style: var(--fitalic);
+    margin-top: 4.2rem;
+    margin-bottom: .8rem;
+    line-height: 1.1;
+}
+
+.result span{
+    color: var(--clrs-acc-purple);
+}
+
+
+footer {
+    text-align: center;
+    position: absolute; 
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.error-label {
+    color: var(--clrs-acc-light-red);
+}
+
+
+@media (min-width: 50em){
+
+    .container{
+        width: 60%;
+        max-width: 45rem;
+        padding: 3rem;
+        border-radius: 1rem 1rem 30% 1rem
+    }
+
+    .divider {
+        position: relative;
+        border-top: 1px solid #ccc;
+    }
+
+    .calculate-button {
+        position: absolute;
+        right: 0;
+        transform: none;
+        left: auto;
+    }
+
+    .bd-input{
+        display: grid;
+        position: relative;
+        margin-bottom: 1.5rem;
+    }
+
+    .bd-input .error {
+        position: absolute;
+        bottom: -1.2rem;
+    }
+
+    .date-input input{
+        padding: .4rem 1rem;
+        display: flex;
+    }
+
+    .date-input{
+        width: 75%;
+    }
+
+    .error {
+        margin-top: 1rem;
+    }
+
+}
+
+
