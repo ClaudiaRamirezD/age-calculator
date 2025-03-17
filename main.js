@@ -25,7 +25,7 @@ calculateButton.addEventListener('click', function () {
         valid = false;
     }
 
-    if (year < 1900 || year > 2024 || isNaN(year)) {
+    if (year < 1900 || year > 2025 || isNaN(year)) {
         document.querySelector('.year-section .error').classList.remove('hidden');
         document.querySelector('label[for="year"]').classList.add('error-label');
         valid = false;
